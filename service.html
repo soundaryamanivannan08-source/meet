@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Services - Stackly</title>
+
+<link rel="stylesheet" href="service.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo"><img src="assets/image.logo.webp" alt="Stackly" style="height: 40px;"></div>
+
+<div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<nav id="nav-list">
+    <div class="dropdown">
+        <a href="index.html">Home</a>
+        <div class="dropdown-content">
+            <a href="index.html">Home 1</a>
+            <a href="home2.html">Home 2</a>
+        </div>
+    </div>
+
+    <a href="about.html">About</a>
+    <a href="service.html">Service</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="dashboard.html">Dashboard</a>
+
+    <a href="login.html" class="login-btn">Login</a>
+
+    <!-- <button id="theme-toggle" class="btn">
+        <i class="fas fa-sun"></i>
+    </button> -->
+</nav>
+
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="service-hero">
+
+<div class="hero-content">
+
+<h1>Smart Tools For Productive Teams</h1>
+
+<p>
+Stackly helps teams communicate, manage meetings, and collaborate
+seamlessly from anywhere in the world.
+</p>
+
+<a href="404.html" class="btn-primary">Start Free Trial</a>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+<section class="services-grid">
+
+<div class="container">
+
+<div class="service-box reveal">
+<i class="fas fa-video"></i>
+<h3>Virtual Meetings</h3>
+<p>
+Host high-quality video meetings with your team or clients
+from anywhere with smooth and secure connections.
+</p>
+</div>
+
+<div class="service-box reveal">
+<i class="fas fa-users"></i>
+<h3>Team Collaboration</h3>
+<p>
+Work together in real-time with chat, file sharing,
+and collaborative tools designed for modern teams.
+</p>
+</div>
+
+<div class="service-box reveal">
+<i class="fas fa-shield-halved"></i>
+<h3>Advanced Security</h3>
+<p>
+Your meetings and data are protected using
+enterprise-level encryption and security protocols.
+</p>
+</div>
+
+<div class="service-box reveal">
+<i class="fas fa-cloud"></i>
+<h3>Cloud Recording</h3>
+<p>
+Record your meetings and store them securely
+in the cloud for easy sharing and future reference.
+</p>
+</div>
+
+<div class="service-box reveal">
+<i class="fas fa-brain"></i>
+<h3>AI Meeting Summary</h3>
+<p>
+Automatically generate meeting notes,
+highlights, and action points using AI technology.
+</p>
+</div>
+
+<div class="service-box reveal">
+<i class="fas fa-chart-line"></i>
+<h3>Analytics & Reports</h3>
+<p>
+Track meeting performance and team productivity
+with powerful analytics dashboards.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <div class="logo"><img src="assets/logo.webp" alt="Stackly" style="height: 40px;"></div>
+            <p>
+                A modern meeting platform for teams. Host meetings,
+                collaborate and connect from anywhere in the world.
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="404.html">Join Meeting</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="404.html">Help Center</a></li>
+                <li><a href="404.html">Documentation</a></li>
+                <li><a href="404.html">Privacy Policy</a></li>
+                <li><a href="404.html">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+                <a href="404.html"><i class="fa-brands fa-facebook-messenger"></i></a>
+                <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
+                <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Stackly Meeting Platform. All rights reserved.</p>
+    </div>
+</footer>
+
+
+<script>
+
+    // Menu Toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        document.getElementById('nav-list').classList.toggle('active');
+    });
+
+    // Scroll Reveal Animation
+function reveal() {
+
+let reveals = document.querySelectorAll(".reveal");
+
+for (let i = 0; i < reveals.length; i++) {
+
+let windowHeight = window.innerHeight;
+let elementTop = reveals[i].getBoundingClientRect().top;
+let elementVisible = 150;
+
+if (elementTop < windowHeight - elementVisible) {
+reveals[i].classList.add("active");
+}
+
+}
+
+}
+
+window.addEventListener("scroll", reveal);
+document.addEventListener("DOMContentLoaded", reveal);
+
+
+    // Active Navbar Link Logic
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('#nav-list a').forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        }
+    });
+
+</script>
+
+</body>
+</html>
+
+
